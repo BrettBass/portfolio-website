@@ -1,4 +1,5 @@
 import * as React from 'react';
+import axios from 'axios';
 import Nav from '../components/Nav/Nav';
 import '../style.css';
 
@@ -8,8 +9,27 @@ const inputField =
   'shadow-sm bg-gray-50 border-2 border-gray-500 focus:border-blue-500 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-slate-50 dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light';
 
 export default function Contact() {
-  const onSubmit = (data) => {
-    console.log(data);
+  const [formData, setFormData] = React.useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: '',
+  });
+
+  const onSubmit = () => {
+    axios.post('/api/contact', formData)
+      .then((response) => {
+        console.log(response.data);
+        // Handle success (e.g., show a success message to the user)
+      })
+      .catch((error) => {
+        console.error('Error sending contact information:', error);
+        // Handle error (e.g., show an error message to the user)
+      });
+  };
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.id]: e.target.value });
   };
 
   return (
@@ -27,6 +47,8 @@ export default function Contact() {
                 id="name"
                 className={inputField}
                 placeholder="First Last"
+                value={formData.name}
+                onChange={handleChange}
               />
             </div>
             <div className="flex flex-col w-1/2">
@@ -36,6 +58,8 @@ export default function Contact() {
                 id="email"
                 className={inputField}
                 placeholder="name@gmail.com"
+                value={formData.email}
+                onChange={handleChange}
                 required
               />
             </div>
@@ -47,6 +71,8 @@ export default function Contact() {
               id="subject"
               className={inputField}
               placeholder="Subject"
+              value={formData.subject}
+              onChange={handleChange}
               required
             />
           </div>
@@ -57,6 +83,8 @@ export default function Contact() {
               rows="6"
               className={inputField}
               placeholder="Leave a comment"
+              value={formData.message}
+              onChange={handleChange}
               required
             />
           </div>
