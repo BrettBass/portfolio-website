@@ -1,0 +1,25 @@
+{
+  "links": [
+    {
+      "label": "Home",
+      "href": ""
+    },
+    {
+      "label": "About",
+      "href": "/about"
+    },
+    {
+      "label": "Projects",
+      "href": "/projects"
+    },
+    {
+      "label": "Contact",
+      "href": "/contact"
+    },
+    {
+      "label": "Resume",
+      "href": "https://drive.google.com/u/0/uc?id=1STGoP0NsWAKwwotpKrYErdOFTQEae44u&export=download",
+      "download": true
+    }
+  ]
+}

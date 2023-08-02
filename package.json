@@ -1,0 +1,24 @@
+{
+  "name": "stackblitz-starters-cekp51",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "@types/react": "18.2.13",
+    "@types/react-dom": "18.2.6",
+    "debug": "4.3.4",
+    "events": "3.3.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-icons": "4.10.1",
+    "react-router-dom": "^6.14.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "react-scripts": "latest"
+  }
+}
