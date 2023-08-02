@@ -28,7 +28,7 @@ export default function Contact() {
       });
   };
 
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.id]: e.target.value });
   };
 
@@ -80,7 +80,7 @@ export default function Contact() {
             <label className={inputHeader}>Message Body</label>
             <textarea
               id="message"
-              rows="6"
+              rows={6}
               className={inputField}
               placeholder="Leave a comment"
               value={formData.message}
