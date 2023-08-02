@@ -1,10 +1,11 @@
 {
-  "name": "stackblitz-starters-cekp51",
+  "name": "portfolio-website",
   "version": "0.0.0",
   "private": true,
   "dependencies": {
     "@types/react": "18.2.13",
     "@types/react-dom": "18.2.6",
+    "axios": "^1.4.0",
     "debug": "4.3.4",
     "events": "3.3.0",
     "react": "18.2.0",
@@ -19,6 +20,18 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "react-scripts": "latest"
+    "react-scripts": "^5.0.1"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
