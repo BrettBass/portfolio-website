@@ -17,7 +17,7 @@ export default function Contact() {
   });
 
   const onSubmit = () => {
-    axios.post('/api/contact', formData)
+    axios.post('http://127.0.0.1:5000/api/contact', formData)
       .then((response) => {
         console.log(response.data);
         // Handle success (e.g., show a success message to the user)
