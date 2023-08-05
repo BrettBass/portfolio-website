@@ -9,7 +9,7 @@ export type Link = {
 const links: Link[] = [
     {
         label: 'Home',
-        href: '',
+        href: '/',
     },
     {
         label: 'About',

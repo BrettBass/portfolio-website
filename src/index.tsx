@@ -16,7 +16,7 @@ export default function Application() {
       <div className="flex-grow"> {/* Use flex-grow to make the main content fill the remaining space */}
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<App />} />
+            <Route path="Home" element={<App />} />
             <Route path="about" element={<About />} />
             <Route path="projects" element={<Project />} />
             <Route path="contact" element={<Contact />} />
